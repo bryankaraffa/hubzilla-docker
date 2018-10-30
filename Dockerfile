@@ -9,7 +9,7 @@ ADD addons/nginx-server.conf /etc/nginx/conf.d/default.conf
 ADD addons/start.sh /start.sh
 
 # useable for any git references
-ENV HUBZILLAVERSION 2.4
+ENV HUBZILLAVERSION 3.8.2
 
 ENV HUBZILLAINTERVAL 10
 env SERVERNAME 127.0.0.1
@@ -36,7 +36,7 @@ RUN set -ex \
         php5-xml \
         php5-zip \
     && mkdir -p /run/nginx /hubzilla \
-    && curl https://codeload.github.com/redmatrix/hubzilla/tar.gz/${HUBZILLAVERSION} | tar -xz --strip-components=1 -C /hubzilla -f - \
+    && curl https://framagit.org/hubzilla/core/-/archive/${HUBZILLAVERSION}/core-${HUBZILLAVERSION}.tar.gz | tar -xz --strip-components=1 -C /hubzilla -f - \
     && chown nginx:nginx -R /hubzilla \
     && chmod 0777 /hubzilla \
     && sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/' /etc/php5/php.ini \
