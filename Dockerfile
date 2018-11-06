@@ -1,6 +1,6 @@
 
 FROM alpine:3.5
-MAINTAINER Silvio Fricke <silvio.fricke@gmail.com>
+MAINTAINER Yoann Aubry <nimblydev@gmail.com>
 
 ENTRYPOINT ["/start.sh"]
 VOLUME /data
