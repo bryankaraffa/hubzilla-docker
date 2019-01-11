@@ -9,7 +9,7 @@ ADD addons/nginx-server.conf /etc/nginx/conf.d/default.conf
 ADD addons/start.sh /start.sh
 
 # useable for any git references
-ENV HUBZILLAVERSION 3.8.2
+ENV HUBZILLAVERSION 3.8.7
 
 ENV HUBZILLAINTERVAL 10
 env SERVERNAME 127.0.0.1
