@@ -35,6 +35,7 @@ RUN set -ex \
         php5-openssl \
         php5-xml \
         php5-zip \
+        postfix \
     && mkdir -p /run/nginx /hubzilla \
     && curl https://framagit.org/hubzilla/core/-/archive/${HUBZILLAVERSION}/core-${HUBZILLAVERSION}.tar.gz | tar -xz --strip-components=1 -C /hubzilla -f - \
     && chown nginx:nginx -R /hubzilla \
