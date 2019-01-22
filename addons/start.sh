@@ -18,7 +18,7 @@ fi
 
 sed -i "s/###SERVERNAME###/${SERVERNAME}/" /etc/nginx/conf.d/default.conf
 
-sed -i "s/^mailhub=.*/mailhub=${SMTP_PASS}:${SMTP_PORT}/" /etc/ssmtp/ssmtp.conf
+sed -i "s/^mailhub=.*/mailhub=${SMTP_HOST}:${SMTP_PORT}/" /etc/ssmtp/ssmtp.conf
 sed -i "s/^AuthUser=.*/AuthUser=${SMTP_USER}/" /etc/ssmtp/ssmtp.conf
 sed -i "s/^AuthPass=.*/AuthPass=${SMTP_PASS}/" /etc/ssmtp/ssmtp.conf
 
